@@ -3,7 +3,7 @@
 ### Install foundry
 https://book.getfoundry.sh/getting-started/installation
 ### Clone the repo
-link
+`git clone https://github.com/Zac369/metadata.git`
 ### Adjust tokenId
 To choose which token you can edit tokenId in the file test/Metadata.t.sol
 
