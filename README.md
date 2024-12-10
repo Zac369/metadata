@@ -1,66 +1,20 @@
-## Foundry
+# Install instructions
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+### Install foundry
+https://book.getfoundry.sh/getting-started/installation
+### Clone the repo
+link
+### Adjust tokenId
+To choose which token you can edit tokenId in the file test/Metadata.t.sol
 
-Foundry consists of:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Useful commands
 
-## Documentation
+### Get the uri for a specific tokenID and write it to a file(result located in the uri folder)
+`forge test --match-test testGetTokenURI -vv --rpc-url wss://mainnet.gateway.tenderly.co`
 
-https://book.getfoundry.sh/
+### Get the image for a specific tokenID and write it to a file(result located in the images folder)
+`forge test --match-test testWriteImage -vv --rpc-url wss://mainnet.gateway.tenderly.co`
 
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+### Get both the token uri and the image
+`forge test -vv --rpc-url wss://mainnet.gateway.tenderly.co`
